@@ -10,7 +10,7 @@ wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-pdf-unlabeled.zip
 ```
 ### PNG image data generated from PDFs: 
 ```
-ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-png-unlabeled.zip
+wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-png-unlabeled.zip
 ```
 # UPDATES:
 5/18/2021: unlabeled 9K image data published.
