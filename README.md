@@ -12,15 +12,16 @@ wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-pdf-unlabeled.zip
 ```
 wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-png-unlabeled.zip
 ```
-## labeled data: 
+## Labeled data: 
 Here we provide the labeled data used for validation/training/testing. There are 6 splits of data in total. We use split 0 for the evaluation split during validation experiment. Splits 1-5 are used for 4 v.s. 1 cross-validation training/testing.
-### labeled data for validation/training/testing: 
+### Labeled data for validation/training/testing: 
 ```
 wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 ```
 
 # UPDATES:
 7/1/2021: labeled 9K image data published.
+
 5/18/2021: unlabeled 9K image data published.
 
 # TODOs:
