@@ -19,7 +19,73 @@ Here we provide the labeled data used for validation/training/testing. There are
 wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 ```
 
+# FFRA MODEL TRAINING:
+## Environment Setup
+### File/folder Setup
+Please make sure the labeled data folder is downloaded and unzipped in the same directory with the code. Generally, your folder should look like this:
+```
+data           
+
+generate_data_pair.py  
+
+train.bash
+
+__pycache__                 
+
+data_info.csv  
+
+model.py               
+
+train.py
+
+coco_eval.py                
+
+dataset.py               
+
+transforms.py
+
+coco_utils.py               
+
+engine.py      
+
+param.py               
+
+utils.py
+```
+### Library Setup
+Here we provide a way of using Anaconda for environment setup. The version of Anaconda we used is 4.9.2
+
+first, we create a virtual environment with python 3.6 installed:
+
+```
+conda create --name arabicFFRA python=3.6
+``` 
+enter the created virtual environment then.
+
+```
+conda activate arabicFFRA
+```
+There are two things mainly needed to be installed, namely pytorch (recent version should work just fine) and pycocotools:
+
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
+
+pip install cython
+
+pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+```
+
+### Running Training Script
+To train a FFRA model under the default setting, simply run:
+
+```
+bash train.bash
+```
+You could change and adjust settings and hyperparameters in training.bash for your further needs.
+
 # UPDATES:
+7/2/2021: FFRA training code uploaded.
+
 7/1/2021: labeled 9K image data published.
 
 5/18/2021: unlabeled 9K image data published.

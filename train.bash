@@ -1,4 +1,4 @@
-flag="--dataset_dir output_data
+flag="--dataset_dir data
       --lr 0.005
       --momentum 0.9
       --weight_decay 0.0005
