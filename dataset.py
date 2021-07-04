@@ -122,7 +122,7 @@ def get_transform_2(train):
         transforms.append(T.RandomHorizontalFlip(0.5))
     return T.Compose(transforms)
 
-class training_detection_dataset(torch.utils.data.Dataset):
+class detection_dataset(torch.utils.data.Dataset):
     def __init__(self, evaluation_set, train = False):
         self.evaluation_set = evaluation_set
         self.train = train
@@ -135,14 +135,18 @@ class training_detection_dataset(torch.utils.data.Dataset):
         else:
             all_splits.pop(evaluation_set) #remove target testing set x
             all_splits.pop(0) #remove set 0 
-        training_splits = all_splits
-
+        
+        if(not train):
+            splits = [evaluation_set]
+        else:
+            splits = all_splits
+            
         self.imgs = []
         self.boxes_gt = []
         with open(args.data_info_path, newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                if(int(row['split_index'])in training_splits):
+                if(int(row['split_index'])in splits):
                     self.imgs.append(row['hashed_prefix']+".jpg")
                     self.boxes_gt.append(row['hashed_prefix']+".xml")
         self.index_dict = {}
@@ -184,7 +188,7 @@ def main():
     print("a normal image will be displayed if the dataset is loaded successfully.")
 
     evaluation_set = 0
-    arabic_book_dataset = training_detection_dataset(evaluation_set,train=True)
+    arabic_book_dataset = detection_dataset(evaluation_set,train=True)
     tpi = torchvision.transforms.ToPILImage()
     img_show = tpi(arabic_book_dataset[42][0])
     print("target annotation: {}".format(arabic_book_dataset[42][1]))

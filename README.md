@@ -24,33 +24,41 @@ wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 ### File/folder Setup
 Please make sure the labeled data folder is downloaded and unzipped in the same directory with the code. Generally, your folder should look like this:
 ```
-data           
+BE-Arabic-9k Index.xlsx  
 
-generate_data_pair.py  
+dataset.py             
 
-train.bash
-
-__pycache__                 
-
-data_info.csv  
-
-model.py               
+param.py         
 
 train.py
 
-coco_eval.py                
+README.md                
 
-dataset.py               
+engine.py              
+
+post_process.py  
 
 transforms.py
 
-coco_utils.py               
+coco_eval.py             
 
-engine.py      
+eval.py                
 
-param.py               
+results          
 
 utils.py
+
+coco_utils.py            
+
+generate_data_pair.py  
+
+test.bash
+
+data_info.csv            
+
+model.py               
+
+train.bash
 ```
 ### Library Setup
 Here we provide a way of using Anaconda for environment setup. The version of Anaconda we used is 4.9.2
@@ -75,7 +83,7 @@ pip install cython
 pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 ```
 
-### Running Training Script
+## Running Training Script
 To train a FFRA model under the default setting, simply run:
 
 ```
@@ -83,7 +91,25 @@ bash train.bash
 ```
 You could change and adjust settings and hyperparameters in training.bash for your further needs.
 
+## Getting the results on a specific evaluation set
+
+To get the prediction of the text/non-text boxes of the evluation set images from your trained model, you need to install the opencv library first, one way to do that is to run the following command:
+
+```
+pip install opencv-python
+```
+
+If you have edited anything in train.bash, e.g. the name of the trained model, please change that accordingly in test.bash as well. Also please make sure that /results/jpg and /results/xml directories exist with the code (or you should adjust the parameters in test.bash based on your changes). If you haven't changed anything, or all the changes have been made in test.bash, run:
+
+```
+bash test.bash
+```
+
+You should be able to see visualization images generated in results/jpg/ and the bounding box predictions written in a .xml format in results/xml.
+
 # UPDATES:
+7/4/2021: FFRA obtaining results code uploaded.
+
 7/2/2021: FFRA training code uploaded.
 
 7/1/2021: labeled 9K image data published.

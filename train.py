@@ -1,4 +1,4 @@
-from dataset import training_detection_dataset 
+from dataset import detection_dataset 
 from model import initialize_faster_rcnn_model
 import torch
 import torch.utils.data
@@ -7,8 +7,8 @@ from param import args
 from engine import train_one_epoch, evaluate
 
 def main():
-	arabic_book_dataset = training_detection_dataset(args.evaluation_set,train=True)
-	arabic_book_data_loader = torch.utils.data.DataLoader(arabic_book_dataset, batch_size=2, shuffle=True, num_workers=4, collate_fn=utils.collate_fn)
+	arabic_book_dataset = detection_dataset(args.evaluation_set,train=True)
+	arabic_book_data_loader = torch.utils.data.DataLoader(arabic_book_dataset, batch_size=args.batch_size, shuffle=True, num_workers=4, collate_fn=utils.collate_fn)
 	model = initialize_faster_rcnn_model()
 
 	device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
