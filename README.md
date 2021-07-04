@@ -87,7 +87,7 @@ pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=Pyth
 To train a FFRA model under the default setting, simply run:
 
 ```
-bash train.bash
+bash run/train.bash
 ```
 You could change and adjust settings and hyperparameters in training.bash for your further needs.
 
@@ -102,7 +102,7 @@ pip install opencv-python
 If you have edited anything in train.bash, e.g. the name of the trained model, please change that accordingly in test.bash as well. Also please make sure that /results/jpg and /results/xml directories exist with the code (or you should adjust the parameters in test.bash based on your changes). If you haven't changed anything, or all the changes have been made in test.bash, run:
 
 ```
-bash test.bash
+bash run/test.bash
 ```
 
 You should be able to see visualization images generated in results/jpg/ and the bounding box predictions written in a .xml format in results/xml.
