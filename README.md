@@ -19,7 +19,7 @@ Here we provide the labeled data used for validation/training/testing. There are
 wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 ```
 
-# FFRA MODEL TRAINING:
+# FFRA MODEL TRAINING/EVALUATION:
 ## Environment Setup
 ### File/folder Setup
 Please make sure the labeled data folder is downloaded and unzipped in the same directory with the code. Generally, your folder should look like this:
