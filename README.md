@@ -25,29 +25,30 @@ wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 Please make sure the labeled data folder is downloaded and unzipped in the same directory with the code. Generally, your folder should look like this:
 ```
 BE-Arabic-9k Index.xlsx  
-demo.csv         
-generate_data_pair.py  
-results
-README.md                
-demo.png         
-get_result.bash        
-run
-coco_eval.py             
-engine.py        
-get_result.py          
+demo.csv               
+get_result.bash  
 train.bash
-coco_utils.py            
-eval_prep.bash   
-model.py               
+README.md                
+demo.png               
+get_result.py    
 train.py
-data_info.csv            
-eval_prep.py     
-param.py               
+coco_eval.py             
+engine.py              
+model.py         
 transforms.py
-dataset.py               
-evaluation_code  
-post_process.py        
+coco_utils.py            
+eval_prep.bash         
+param.py         
 utils.py
+data                     
+eval_prep.py           
+post_process.py
+data_info.csv            
+evaluation_code        
+results
+dataset.py               
+generate_data_pair.py  
+run
 ```
 ### Library Setup
 Here we provide a way of using Anaconda for environment setup. The version of Anaconda we used is 4.9.2
