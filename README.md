@@ -113,7 +113,7 @@ cd evaluation_code
 matlab
 ```
 Inside your Matlab, open 'Run_Seg_Eval.m'. There is one more thing to do before running evaluation, that is to set the path of the folder we just created. The three variables needed to be edited are: "ResultsPath","XMLPath","IMGPath" at the beginning of the code. On default, the folder path is '../results/testing_model-0/xml/'. If you didn't change anything in eval_prep.bash, you should be fine without editing anything. However, say your 'eval_name' parameter set in eval_prep.bash is set to "FFRA" and your evaluation set is 2, the folder created by the eval_prep.bash in "/results/" should be "FFRA-2" accordingly. You should change '../results/testing_model-0/xml/' to '../results/FFRA-2/xml/' in this case (Please noted that for IMGPath, it is '/jpg/' instead of '/xml/'). 
-Finally, run the code and you should be able to see results at the end of the console when it is finished.
+Finally, run the code and you should be able to see results at the end of the console window when it is finished.
 
 # UPDATES:
 7/4/2021: FFRA obtaining results code uploaded.
