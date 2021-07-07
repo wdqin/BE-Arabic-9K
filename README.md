@@ -82,6 +82,8 @@ pip install cython
 
 pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 ```
+### Matlab Installation
+Since our evaluation code is written in Matlab, you will need a Matlab software to run the evaluation. To be notice that our code is developed in an older version of Matlab, thus the latest version of Matlab will not work as the differences in certain functions/libraries we used. The Matlab version we are using is Matlab 2017a.
 
 ## Running Training Script
 To train a FFRA model under the default setting, simply run:
@@ -102,10 +104,26 @@ pip install opencv-python
 If you have edited anything in train.bash, e.g. the name of the trained model, please change that accordingly in test.bash as well. Also please make sure that /results/jpg and /results/xml directories exist with the code (or you should adjust the parameters in test.bash based on your changes). If you haven't changed anything, or all the changes have been made in test.bash, run:
 
 ```
-bash run/test.bash
+bash run/get_result.bash
 ```
 
 You should be able to see visualization images generated in results/jpg/ and the bounding box predictions written in a .xml format in results/xml.
+
+## Evaluation on your prediction results
+Our evaluation code is developed on Matlab, so there's an additional process to prepare the data in a suitable format that the Matlab code could read. To do this, simply run 'eval_prep.bash':
+```
+bash run/eval_prep.bash
+```
+What it does is to create a folder containing needed image, prediction, ground truth files in the folder "results/", the name of the folder is decided in 'eval_prep.bash'. Say the name is "test_model", the folder name will be "test_model-x", where x is the split index you are evaluating (e.g. the validation set is 0). The script will copy the evaluation set data to the folder, which will be used by the matlab code. Here we want to point out that please don't mix the data in one folder with the another that is not in the same evaluation set, as that will lead to inaccurate evaluation results on the specific evaluation set.
+
+After the preparation is done, you could go to the 'evaluation_code' folder and run your Matlab:
+```
+cd evaluation_code
+
+matlab
+```
+Then open 'Run_Seg_Eval.m'. There is one more thing to do before running evaluation, that is to set the path of the folder we just created. The three variables needed to be edited are: "ResultsPath","XMLPath","IMGPath" at the beginning of the code. On default, the folder path is '../results/testing_model-0/xml/'. If you didn't change anything in eval_prep.bash, you should be fine without editing anything. However, say your 'eval_name' parameter set in eval_prep.bash is set to "FFRA" and your evaluation set is 2, the folder created by the eval_prep.bash in "/results/" should be "FFRA-2" accordingly. You should change '../results/testing_model-0/xml/' to '../results/FFRA-2/xml/' in this case. 
+Finally, run the code and you should be able to see results at the end of the console when it is finished.
 
 # UPDATES:
 7/4/2021: FFRA obtaining results code uploaded.

@@ -1,4 +1,4 @@
-# modified by Wenda Qin 7/1/2021
+# modified by Wenda Qin, 7/1/2021
 
 import xml.etree.ElementTree as ET
 import torch

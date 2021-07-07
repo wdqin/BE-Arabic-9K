@@ -1,3 +1,5 @@
+# modified by Wenda Qin, 7/7/2021
+
 from dataset import detection_dataset 
 from model import initialize_faster_rcnn_model
 import torch

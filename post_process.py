@@ -1,3 +1,5 @@
+# modified by Wenda Qin 7/7/2021
+
 class Point:
     def __init__(self,setX,setY):
         self.x = setX

@@ -1,3 +1,5 @@
+# modified by Wenda Qin, 7/7/2021
+
 import argparse
 import os
 import torch
@@ -24,8 +26,12 @@ class Param:
         self.parser.add_argument('--i_r_threshold', type=float, default=0.2, help='a threshold for merging two overlapped predicted boxes')
         self.parser.add_argument('--visualization_output_directory', type=str, default='results/jpg', help='visualization output directory')
         self.parser.add_argument('--xml_output_directory', type=str, default='results/xml', help='xml output directory')
-        self.args = self.parser.parse_args()
 
+        #evaluation preparation
+        self.parser.add_argument('--eval_name', type=str, default='testing_model', help='the name for folders to save model predictions for later evaluation.')
+
+        self.args = self.parser.parse_args()
+        
 param = Param()
 args = param.args
 

@@ -1,5 +1,5 @@
 # the code is developed based on: https://colab.research.google.com/github/pytorch/vision/blob/temp-tutorial/tutorials/torchvision_finetuning_instance_segmentation.ipynb
-# modified by Wenda Qin 7/2/2021
+# modified by Wenda Qin, 7/2/2021
 import torchvision
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 
