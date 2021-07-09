@@ -124,9 +124,9 @@ Finally, run the code and you should be able to see results at the end of the co
 Please noted that the trained model differs from hardware to hardware, pytorch version to pytorch version, so there will always be subtle differences in results.
 
 # Benchmark
-Here we provide the benchmark results of the 'test_model', a pretrained FFRA model.
+Here we provide the benchmark results of the 'test_model', a pretrained FFRA model. Please refer to our paper 'Extracting text from scanned Arabic books: a large-scale benchmark dataset and a fine-tuned Faster-R-CNN model' for the explanation of the metrics.
 
-| Feature type | OSE | USE | MSE | FA | CS | rho | F1 Score | Accuracy | TPA | FgPA |
+| Feature type | OSE | USE | MSE | FA | CS | rho | F1 Score (%) | Accuracy (%) | TPA (%) | FgPA (%) |
 | ---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Validation | 0.05 | 1.21 | 0.10 | 0.04 | 2.13 | 0.27 | 98.95 | 99.08 | 96.89 | 96.05 |
 
