@@ -132,6 +132,8 @@ Here we provide the benchmark results of the 'test_model', a pretrained FFRA mod
 
 
 # UPDATES:
+7/9/2021: FFRA evaluation benchmark uploaded, most of the used code has been updated and uploaded, v1.0 out.
+
 7/7/2021: FFRA evaluation code uploaded.
 
 7/4/2021: FFRA obtaining results code uploaded.
