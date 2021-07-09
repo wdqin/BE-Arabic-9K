@@ -134,6 +134,7 @@ Here we provide the benchmark results of the 'test_model', a pretrained FFRA mod
 | Cross-valid set 3 | 0.0433 | 0.8000 | 0.0767 | 0.0167 | 2.4533 | 0.1861 | 99.7384 | 99.6190 | 97.6949 | 97.1649 |
 | Cross-valid set 4 | 0.0333 | 0.8667 | 0.0200 | 0.0133 | 2.4167 | 0.1883 | 99.5524 | 99.6944 | 97.5195 | 97.0421 |
 | Cross-valid set 5 | 0.0433 | 0.9233 | 0.0533 | 0.0267 | 2.2833 | 0.2140 | 99.5376 | 99.4389 | 97.2087 | 96.6026 |
+
 # UPDATES:
 7/7/2021: FFRA evaluation code uploaded.
 
