@@ -127,7 +127,7 @@ Please noted that the trained model differs from hardware to hardware, pytorch v
 Here we provide the benchmark results of the 'test_model', a pretrained FFRA model.
 
 | Feature type | OSE | USE | MSE | FA | CS | rho | F1 Score | Accuracy | TPA | FgPA |
-| ---- | :---: | :---: | :---:| :---: |:---: |:---: |
+| ---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Validation | 0.05 | 1.21 | 0.10 | 0.04 | 2.13 | 0.27 | 98.9508 | 99.0783 | 96.8858 | 96.0500 |
 | Cross-valid set 1 | 0.04 | 0.96 | 0.05 | 0.05 | 2.52 | 0.20 | 99.5553 | 99.5140 | 97.1892 | 96.4484 |
 | Cross-valid set 2 | 0.0500 | 0.9067 | 0.0267 | 0.0200 | 2.4000 | 0.1891 | 99.3586 | 99.6407 | 97.3316 | 96.7536 |
