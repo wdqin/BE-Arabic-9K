@@ -159,6 +159,5 @@ If you use or discuss our BE-Arabic-9K dataset or FFRA baseline benchmark, pleas
 ```
 
 # TODOs:
-1. Adding pretrained model and benchmark.
-2. Build a dump with a link of older code for reproducing the original results.
-3. Adding comments to the code.
+1. Build a dump with a link of older code for reproducing the original results.
+2. Adding comments to the code.
