@@ -121,7 +121,7 @@ matlab
 Inside your Matlab, open 'Run_Seg_Eval.m'. There is one more thing to do before running evaluation, that is to set the path of the folder we just created. The three variables needed to be edited are: "ResultsPath","XMLPath","IMGPath" at the beginning of the code. On default, the folder path is '../results/testing_model-0/xml/'. If you didn't change anything in eval_prep.bash, you should be fine without editing anything. However, say your 'eval_name' parameter set in eval_prep.bash is set to "FFRA" and your evaluation set is 2, the folder created by the eval_prep.bash in "/results/" should be "FFRA-2" accordingly. You should change '../results/testing_model-0/xml/' to '../results/FFRA-2/xml/' in this case (Please noted that for IMGPath, it is '/jpg/' instead of '/xml/'). 
 Finally, run the code and you should be able to see results at the end of the console window when it is finished.
 
-Please noted that the trained model differs from hardware to hardware, pytorch version to pytorch version, so there will always be subtle differences in results.
+Please noted there will always be subtle differences in the result for models trained in different environments because of the used hardware, library version etc.
 
 # Benchmark
 Here we provide the benchmark results of the 'test_model', a pretrained FFRA model. Please refer to our paper 'Extracting text from scanned Arabic books: a large-scale benchmark dataset and a fine-tuned Faster-R-CNN model' for the explanation of the metrics.
