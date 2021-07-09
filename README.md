@@ -18,6 +18,12 @@ Here we provide the labeled data used for validation/training/testing. There are
 ```
 wget ftp://csr.bu.edu/Data-BE-Arabic-9K/BE-Arabic-9K-labeled.zip
 ```
+## Pretrained model
+Here we provide the pre-trained model we trained for validation. 
+```
+wget ftp://csr.bu.edu/Data-BE-Arabic-9K/test_model
+```
+Simply moving it to the root directory of this repository and follow the instruction from 'Getting the results on a specific evaluation set' should be able to get you the evaluation results shown in the benchmark section.
 
 # FFRA MODEL TRAINING/EVALUATION:
 ## Environment Setup
@@ -115,6 +121,19 @@ matlab
 Inside your Matlab, open 'Run_Seg_Eval.m'. There is one more thing to do before running evaluation, that is to set the path of the folder we just created. The three variables needed to be edited are: "ResultsPath","XMLPath","IMGPath" at the beginning of the code. On default, the folder path is '../results/testing_model-0/xml/'. If you didn't change anything in eval_prep.bash, you should be fine without editing anything. However, say your 'eval_name' parameter set in eval_prep.bash is set to "FFRA" and your evaluation set is 2, the folder created by the eval_prep.bash in "/results/" should be "FFRA-2" accordingly. You should change '../results/testing_model-0/xml/' to '../results/FFRA-2/xml/' in this case (Please noted that for IMGPath, it is '/jpg/' instead of '/xml/'). 
 Finally, run the code and you should be able to see results at the end of the console window when it is finished.
 
+Please noted that the trained model differs from hardware to hardware, pytorch version to pytorch version, so there will always be subtle differences in results.
+
+# Benchmark
+Here we provide the benchmark results of the 'test_model', a pretrained FFRA model.
+
+| Feature type | OSE | USE | MSE | FA | CS | rho | F1 Score | Accuracy | TPA | FgPA |
+| ---- | :---: | :---: | :---:| :---: |:---: |:---: |
+| Validation | 0.05 | 1.21 | 0.10 | 0.04 | 2.13 | 0.27 | 98.9508 | 99.0783 | 96.8858 | 96.0500 |
+| Cross-valid set 1 | 0.04 | 0.96 | 0.05 | 0.05 | 2.52 | 0.20 | 99.5553 | 99.5140 | 97.1892 | 96.4484 |
+| Cross-valid set 2 | 0.0500 | 0.9067 | 0.0267 | 0.0200 | 2.4000 | 0.1891 | 99.3586 | 99.6407 | 97.3316 | 96.7536 |
+| Cross-valid set 3 | 0.0433 | 0.8000 | 0.0767 | 0.0167 | 2.4533 | 0.1861 | 99.7384 | 99.6190 | 97.6949 | 97.1649 |
+| Cross-valid set 4 | 0.0333 | 0.8667 | 0.0200 | 0.0133 | 2.4167 | 0.1883 | 99.5524 | 99.6944 | 97.5195 | 97.0421 |
+| Cross-valid set 5 | 0.0433 | 0.9233 | 0.0533 | 0.0267 | 2.2833 | 0.2140 | 99.5376 | 99.4389 | 97.2087 | 96.6026 |
 # UPDATES:
 7/7/2021: FFRA evaluation code uploaded.
 
@@ -125,6 +144,20 @@ Finally, run the code and you should be able to see results at the end of the co
 7/1/2021: labeled 9K image data published.
 
 5/18/2021: unlabeled 9K image data published.
+
+# CITATION:
+If you use or discuss our BE-Arabic-9K dataset or FFRA baseline benchmark, please cite our paper:
+
+```
+@article{elanwar2021extracting,
+  title={Extracting text from scanned Arabic books: a large-scale benchmark dataset and a fine-tuned Faster-R-CNN model},
+  author={Elanwar, Randa and Qin, Wenda and Betke, Margrit and Wijaya, Derry},
+  journal={International Journal on Document Analysis and Recognition (IJDAR)},
+  pages={1--14},
+  year={2021},
+  publisher={Springer}
+}
+```
 
 # TODOs:
 1. Adding pretrained model and benchmark.

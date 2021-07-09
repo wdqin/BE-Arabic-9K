@@ -1,6 +1,6 @@
 flag="
       --data_info_path data_info.csv
-      --evaluation_set 0
+      --evaluation_set 1
       --dataset_dir output_data
       --eval_name testing_model
       "
