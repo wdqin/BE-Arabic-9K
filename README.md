@@ -116,6 +116,8 @@ Inside your Matlab, open 'Run_Seg_Eval.m'. There is one more thing to do before 
 Finally, run the code and you should be able to see results at the end of the console window when it is finished.
 
 # UPDATES:
+7/7/2021: FFRA evaluation code uploaded.
+
 7/4/2021: FFRA obtaining results code uploaded.
 
 7/2/2021: FFRA training code uploaded.
@@ -125,5 +127,6 @@ Finally, run the code and you should be able to see results at the end of the co
 5/18/2021: unlabeled 9K image data published.
 
 # TODOs:
-1. Releasing the dataset including ~9000 images for BE-Arabic-9K. including 1800 manually-labeled data. The rest of the data will be semi-annotated by the trained fine-tuned Faster R-CNN (as provided in 2.). In additon, another set of 300 manually-labeled images will be only provided with image input for potential testing/challenge in the future. (late May)
-2. Releasing the code for training a fine-tuned Faster R-CNN as benchmark. A pre-trained model trained with the 1800 manually-label data will also be provided. (early June).
+1. Adding pretrained model and benchmark.
+2. Build a dump with a link of older code for reproducing the original results.
+3. Adding comments to the code.
