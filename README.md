@@ -128,7 +128,7 @@ Here we provide the benchmark results of the 'test_model', a pretrained FFRA mod
 
 | Feature type | OSE | USE | MSE | FA | CS | rho | F1 Score | Accuracy | TPA | FgPA |
 | ---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Validation | 0.05 | 1.21 | 0.10 | 0.04 | 2.13 | 0.27 | 98.9508 | 99.0783 | 96.8858 | 96.0500 |
+| Validation | 0.05 | 1.21 | 0.10 | 0.04 | 2.13 | 0.27 | 98.95 | 99.08 | 96.89 | 96.05 |
 
 
 # UPDATES:
