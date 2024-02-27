@@ -1,7 +1,33 @@
 # README 
-This is the repository for scanned Arabic book/document dataest BE-Arabic-9K. A fine-tuned Faster R-CNN model implemented is also provided for benchmark. The author for the coding part is currently on an internship until May. Thus, the code and data will be released approximately in late-May or mid-June.
+~~This is the repository for scanned Arabic book/document dataest BE-Arabic-9K. A fine-tuned Faster R-CNN model implemented is also provided for benchmark. The author for the coding part is currently on an internship until May. Thus, the code and data will be released approximately in late-May or mid-June.~~
+
+Update 2/27/2024: I have retrieved the data and the model files from the out-of-date school server. And temporarily put them in a Google Drive folder. Please check the link below, and let me know if the download works well and if there's anything file missing. I am talking to the department people to store the data in a more consistent space, and at that time I will remove the data from Google Drive and provide a new link. Sorry for the mess in the last few months/years for people who are interested in the dataset. Please check the download link below.
 
 # DOWNLOAD:
+
+**All the files can be downloaded from the following drive link:**
+[Google Drive](https://drive.google.com/drive/folders/1MvNwLWQaElDL8bjXYnTn6FH_SYFvR8hJ?usp=sharing)
+
+## Files Explained
+### Unlabeled data: 
+```
+BE-Arabic-9K-pdf-unlabeled/
+```
+
+Source PDFs available but unlabeled images in BE-Arabic-9K. This one contains all BE-Arabic-9K book pdf scans. The ```BE-Arabic-9k Index.xlsx``` file within the folder describes the organization of the pdf scan in each unzipped folder.
+
+```BE-Arabic-9K-png-unlabeled/```
+
+Source PNGs available but unlabeled images in BE-Arabic-9K. This one contains the split PNG image for each page in the pdf scans. ```pdf2png_9K.csv``` within the folder describes the pairing relation between the name-hashed image and the coresponding page in its PDF part. 
+
+## Labeled data:
+```data/``` and ```data_info.csv```
+
+Here we provide the labeled data used for validation/training/testing. There are 6 splits of data in total. We use split 0 for the evaluation split during validation experiment. Splits 1-5 are used for 4 v.s. 1 cross-validation training/testing.
+
+## Pretrained model
+```test_model```
+Here we provide the pre-trained model we trained for validation. Simply moving it to the root directory of this repository and follow the instruction from 'Getting the results on a specific evaluation set' should be able to get you the evaluation results shown in the benchmark section.
 <!---
 ## Unlabeled data: 
 The following wget commands allow downloading source PDFs and PNGS for all available but unlabeled images in BE-Arabic-9K. The PDF one contains all BE-Arabic-9K book pdf scans. The PNG one contains the split PNG image for each page in the pdf scans. The BE-Arabic-9k Index.xlsx file within PDF .zip file describes the organization of the pdf scan in each unzipped folder. pdf2png_9K.csv within the PNG .zip file describes the pairing relation between the name-hashed image and the coresponding page in its PDF part.  
@@ -31,7 +57,7 @@ Simply moving it to the root directory of this repository and follow the instruc
 # FFRA MODEL TRAINING/EVALUATION:
 ## Environment Setup
 ### File/folder Setup
-Please make sure the labeled data folder is downloaded and unzipped in the same directory with the code. Generally, your folder should look like this:
+Please make sure the labeled data folder is downloaded in the same directory with the code. Generally, your folder should look like this:
 ```
 BE-Arabic-9k Index.xlsx  
 demo.csv               
