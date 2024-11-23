@@ -3,6 +3,9 @@
 
 Update 2/27/2024: I have retrieved the data and the model files from the out-of-date school server. And temporarily put them in a Google Drive folder. Please check the link below, and let me know if the download works well and if there's anything file missing. I am talking to the department people to store the data in a more consistent space, and at that time I will remove the data from Google Drive and provide a new link. Sorry for the mess in the last few months/years for people who are interested in the dataset. Please check the download link below.
 
+Update 11/22/2024:
+All data has been uploaded again to a new Google drive space. This time it should be a more consistent link. Sorry for the previous inconvenience!
+
 # DOWNLOAD:
 
 **All the files can be downloaded from the following drive link:**
