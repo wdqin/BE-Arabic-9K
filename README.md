@@ -9,7 +9,7 @@ All data has been uploaded again to a new Google drive space. This time it shoul
 # DOWNLOAD:
 
 **All the files can be downloaded from the following drive link:**
-[Google Drive](https://drive.google.com/drive/folders/1bNLqLqwq7dCcNf5Ct2y9bY5LDUwYLX_1?usp=sharing)
+[Google Drive](https://drive.google.com/drive/folders/1bNLqLqwq7dCcNf5Ct2y9bY5LDUwYLX_1?usp=sharing) (11/22/24: now restored)
 
 ## Files Explained
 ### Unlabeled data: 
